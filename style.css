@@ -239,7 +239,7 @@ width: 25%;
 
 #inicio .bloque-inicio h1 {
   color: var(--primary-color);
-  font-size: 8vw;      /* El tamaño del texto se adapta al ancho de la pantalla */
+  font-size: 7vw;      /* El tamaño del texto se adapta al ancho de la pantalla */
   font-family: "Dancing Script", cursive;
   margin: 10px 0;      /* Espacio arriba y abajo */
   text-shadow: 2px 2px 5px var(--shadow-color);
@@ -655,20 +655,6 @@ color: #060606; /* Cambiar color al pasar el ratón (puedes personalizarlo) */
     display: block;
     padding: 10px;
     cursor: pointer;
-  }
-@media (max-width: 768px) {
-      header .container {
-          flex-direction: column; /* Cambia la dirección del contenedor a columna */
-          align-items: center; /* Centra los elementos */
-      }
-      
-      .seccion {
-          padding: 20px; /* Ajusta el padding para móviles */
-      }
-      
-      #inicio .bloque-inicio {
-          width: 90%; /* Asegúrate de que el ancho se adapte en móviles */
-      }
   }
 .containercontacto{
   display: flex;

@@ -1,24 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const inpNombre = document.getElementById('input-nombre');
-  const inpEmail = document.getElementById('input-telephone');
-  const inpMensaje = document.getElementById('input-mensaje');
 
-  async function enviardatos() {
-    const nombre = inpNombre.value;
-    const email = inpEmail.value;
-    const mensaje = inpMensaje.value;
-
-    if (!nombre || !email || !mensaje) {
-      alert('Por favor rellene todos los campos');
-      return;
-    }
-
-    alert('Datos enviados correctamente');
-    inpNombre.value = "";
-    inpEmail.value = "";
-    inpMensaje.value = "";
-  }
-
+  // Funcionalidad de desplazamiento suave para los enlaces de navegación
   document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
@@ -49,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+  // Funcionalidad para el botón de "scroll to top" (desplazarse hacia arriba)
   document.querySelector('.btn-scroll-to-top').addEventListener('click', function(event) {
     event.preventDefault(); // Evita el comportamiento predeterminado del enlace
     window.scrollTo({
@@ -56,11 +39,37 @@ document.addEventListener("DOMContentLoaded", function() {
       behavior: 'smooth' // Desplazamiento suave
     });
   });
-
-  // Evitar que el botón de envío recargue la página
-  const submitButton = document.querySelector('.boton-negro');
-  submitButton.addEventListener('click', function(event) {
-    event.preventDefault(); // Evita la recarga de la página
-    enviardatos();
-  });
 });
+function enviarWhatsApp() {
+  // Obtener los valores de los campos
+  var nombre = document.getElementById("input-nombre").value.trim();
+  var correo = document.getElementById("input-telephone").value.trim();
+  var mensaje = document.getElementById("input-mensaje").value.trim();
+
+  // Validación de campos vacíos
+  if (nombre === "" || correo === "" || mensaje === "") {
+    alert("Por favor, rellena todos los campos.");
+    return;
+  }
+
+  // URL de WhatsApp con los datos
+  var url =
+    "https://wa.me/51962286009?text=" +
+    encodeURIComponent("Hola! Mi nombre es " + nombre) +
+    "%0a" +
+    encodeURIComponent("Mi correo es " + correo) +
+    "%0a" +
+    encodeURIComponent("Te escribo para: " + mensaje) +
+    "%0a" +
+    encodeURIComponent("😊😊💅🏻💅🏻");
+
+  // Abrir WhatsApp en una nueva ventana
+  window.open(url, "_blank");
+
+  // Resetear el formulario después de enviarlo
+  document.getElementById("input-nombre").value = "";
+  document.getElementById("input-telephone").value = "";
+  document.getElementById("input-mensaje").value = "";
+
+}
+
