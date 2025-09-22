@@ -1,221 +1,503 @@
+<!-- =======================
+     index.html — AJ Nails
+     ======================= -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AJ Nails Studio: Especialistas en el cuidado de tus uñas con diseños creativos y ambiente relajante en Ayacucho. ¡Agenda tu cita!"> 
-    <title>AJ NAILS </title>
-    <link rel="shortcut icon" href="img/logoconfondo.jpeg" >
-    <!-- Preconnect a Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Consolidación de fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Lato:ital,wght@0,100;1,100&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:wght@100;300;400;500;700;900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" >
-    <link rel="stylesheet" href="css/normalize.css" >
-    <link rel="stylesheet" href="style.css" >
-    <script src="https://kit.fontawesome.com/d9cdfd874a.js" crossorigin="anonymous"></script>
-    <!-- Cuerpo de la pagina -->
-    <body>
-      <header>
-        <div class="container">
-        <div class="fila">
-          <div class="columna-50">
-            <a href="index.html">
-              <img src="img/logonails.png" alt="logo circular" class="logo" width="100" >
-            </a>
-          </div>
-          <div class="columna-50">
-              <nav class="nav-links">
-              <a href="#inicio">Inicio</a>
-              <a href="#nosotros">Nosotros</a>
-              <a href="#servicios">Servicios</a>
-              <a href="#galeria">Diseños</a>
-              <a href="#contactenos">Agendar cita</a>
-            </nav>
-          </div>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="AJ Nails Studio: especialistas en uñas, diseños creativos y ambiente relajante en Ayacucho. ¡Agenda tu cita!"
+    />
+    <title>AJ NAILS</title>
+    <link rel="icon" href="img/logoconfondo.jpeg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Montserrat:wght@400;600;800&family=Roboto:wght@400;500;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (opcional) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css"
+    />
+    <!-- en <head> -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfAm0K8kC9Z6rYb0qZ3x4e6q5S9F1hjZVZx1J6qO3Qn1Y6Cw9Cqv9Zg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+          <img src="img/logonails.png" alt="AJ Nails logo" class="brand-logo" />
+          <span class="brand-text d-none d-sm-inline">AJ Nails</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#galeria">Diseños</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">Agendar cita</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="productos.html">Tienda</a>
+            </li>
+
+            <!-- Botón Carrito -->
+            <!-- En tu <nav> ... -->
+              <li class="nav-item ms-lg-3">
+            <button
+              id="cartButton"
+              class="btn cart-btn position-relative"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasCart"
+              aria-controls="offcanvasCart"
+            >
+              <i class="fa-solid fa-bag-shopping"></i>
+              <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </button>
+          </li>
+          </ul>
         </div>
       </div>
-    </header>
-    <main>
-      <section id="inicio" data-aos="fade-up">
-        <img src="img/ajsinmarca.jpeg " alt="fondo principal">
-        <div class="bloque-inicio">
-          <h1>Bienvenidos a AJ nails studio</h1>
-          <p>Lugar donde te consentimos</p>
-          <a href="#nosotros" class="boton boton-amarillo">VER MÁS</a>         
+    </nav>
+
+    <main class="mt-5 pt-4">
+      <!-- ========== HERO ========== -->
+      <section id="inicio" class="section-hero position-relative">
+        <img
+          src="img/ajsinmarca.jpeg"
+          alt="AJ Nails portada"
+          class="hero-img"
+          loading="eager"
+        />
+        <div class="hero-overlay container">
+          <div class="text-center" data-aos="fade-up">
+            <h1 class="hero-title">Bienvenidos a AJ Nails Studio</h1>
+            <p class="hero-subtitle">Un lugar para consentirte 💖</p>
+            <div class="d-flex gap-2 justify-content-center flex-wrap">
+              <a href="#servicios" class="btn btn-rose">Ver servicios</a>
+              <a
+                href="https://wa.me/51962286009?text=Hola%2C%20quiero%20agendar%20mi%20cita%20%F0%9F%92%85"
+                class="btn btn-outline-light"
+                target="_blank"
+                rel="noopener"
+                >Reservar por WhatsApp</a
+              >
+            </div>
+          </div>
         </div>
       </section>
-      <section id="nosotros" class="seccion" data-aos="fade-up">
+
+      <!-- ========== NOSOTROS ========== -->
+      <section id="nosotros" class="section-pad">
         <div class="container">
-          <h3>NOSOTROS</h3>
-          <p>          
-            En AJ Nails Estudio, nos especializamos en el cuidado de tus uñas en un ambiente relajante y acogedor. Nuestra especialista utiliza productos de alta calidad y técnicas innovadoras para ofrecerte manicuras y diseños creativos que realzan tu belleza.
-            Nos apasiona brindarte una experiencia única y personalizada, donde cada visita es un momento para desconectar y cuidarte. ¡Te esperamos para mimarte como te mereces!
-          </p>
+          <div class="row g-4 align-items-center">
+            <div class="col-12 text-center">
+              <h2 class="section-title" data-aos="fade-up">Nosotros</h2>
+            </div>
+            <div class="col-12 col-lg-10 mx-auto">
+              <p
+                class="lead text-center"
+                data-aos="fade-up"
+                data-aos-delay="50"
+              >
+                En AJ Nails Studio nos enfocamos en el cuidado de tus uñas con
+                productos de alta calidad y técnicas innovadoras. Disfruta de un
+                ambiente relajante, atención personalizada y diseños que realzan
+                tu estilo.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-  <section id="servicios" class="seccion" data-aos="fade-up">
-    <div class="container-fluid">
-      <h3 class="titulo-principal">Nuestros Servicios</h3>
-        <div class="raw">
-      <div class="columna columna-42">
-        <div class="Servicios">
-          <img src="img/acrilico.jpg" alt="servicios">
-          <h4 class="servicio-titulo">UÑAS ACRÍLICAS Y POLYGEL</h4>
+
+      <!-- ========== SERVICIOS ========== -->
+      <section id="servicios" class="section-pad">
+        <div class="container">
+          <h2 class="section-title text-center" data-aos="fade-up">
+            Nuestros servicios
+          </h2>
+
+          <div class="row g-4 mt-1 row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="col" data-aos="fade-up" data-aos-delay="0">
+              <article class="card service-card h-100">
+                <img
+                  src="img/acrilico.jpg"
+                  class="card-img-top"
+                  alt="Uñas acrílicas y polygel"
+                  loading="lazy"
+                />
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title fw-bold">
+                    Uñas acrílicas y Polygel
+                  </h3>
+                  <p class="card-text small">
+                    Esculpidas con acabado profesional y diseño a tu gusto.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-aos="fade-up" data-aos-delay="75">
+              <article class="card service-card h-100">
+                <img
+                  src="img/rubber.jpg"
+                  class="card-img-top"
+                  alt="Nivelación con Rubber"
+                  loading="lazy"
+                />
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title fw-bold">Nivelación con Rubber</h3>
+                  <p class="card-text small">
+                    Fortalecimiento y corrección para un acabado uniforme.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="col" data-aos="fade-up" data-aos-delay="150">
+              <article class="card service-card h-100">
+                <img
+                  src="img/esmaltadosemipermante.jpg"
+                  class="card-img-top"
+                  alt="Esmaltado semipermanente"
+                  loading="lazy"
+                />
+                <div class="card-body text-center">
+                  <h3 class="h5 card-title fw-bold">
+                    Esmaltado semipermanente
+                  </h3>
+                  <p class="card-text small">
+                    Color intenso y brillo duradero que cuida tus uñas.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="columna columna-43">
-        <div class="Servicios">
-          <img src="img/rubber.jpg" alt="servicios" >
-          <h4 class="servicio-titulo">NIVELACIÓN CON RUBBER</h4>
-        </div>
-      </div>
-      <div class="columna columna-44">
-        <div class="Servicios">
-          <img src="img/esmaltadosemipermante.jpg" alt="servicios">
-          <h4 class="servicio-titulo">ESMALTADO SEMIPERMANENTE</h4>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="galeria" class="seccion" data-aos="fade-up">
-  <div class="container-fluid">
-    <h3>Ispiración de diseños</h3>
-    <div class="row">
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/1.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/2.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/3.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/4.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/5.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/6.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/7.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/8.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/9.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/10.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/11.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/12.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/13.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/14.jpg" alt="Diseño de uñas"></div></div>
-      <div class="columna columna-33"><div class="Galeria-1"><img src="img/mejorado/15.jpg" alt="Diseño de uñas"></div></div>
-    </div>
-  </div>
-</section>
-      <section id="contactenos" class="seccion" data-aos="fade-up">
-        <div class="mapa-container">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.2452227408149!2d-74.23711790000003!3d-13.163604799999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91127d3ae537b589%3A0xa4c31e6604bc491c!2sLosa%20deportiva%20de%20Arenales!5e0!3m2!1ses-419!2spe!4v1727486313200!5m2!1ses-419!2spe" 
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+      </section>
+
+      <!-- ========== GALERÍA ========== -->
+      <section id="galeria" class="section-pad">
         <div class="container-fluid">
-          <div class="row">
-            <div class="columna columna-41 empujar-58">
-              <h3>Contacto</h3>
-              <div class="formu">
-                <div class="form-blok">
-                  <input
-                    id="input-nombre"
-                    type="text"
-                    name="nombre"
-                    class="form-control"
-                    placeholder="Nombre"
-                  >
-                </div>
-                <div class="form-blok">
-                  <input
-                    id="input-telephone"
-                    type="text"
-                    name="correo"
-                    class="form-control"
-                    placeholder="Correo"
-                  >
-                </div>
-                <div class="form-blok">
-                  <textarea
-                    id="input-mensaje"
-                    name="mensaje"
-                    placeholder="Mensaje"
-                  ></textarea>
-                </div>
-                <div class="form-blok bloque-ultimo">
-                  <input
-                    onclick="enviarWhatsApp()"
-                    type="button"
-                    class="boton boton-negro"
-                    value="Enviar"
-                  >
-                </div>
+          <h2 class="section-title text-center" data-aos="fade-up">
+            Inspiración de diseños
+          </h2>
+
+          <div class="row g-3 mt-1 row-cols-2 row-cols-md-3 row-cols-lg-5">
+            <!-- Repite/ajusta según tu carpeta -->
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/1.jpg" alt="Diseño 1" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/2.jpg" alt="Diseño 2" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/3.jpg" alt="Diseño 3" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/4.jpg" alt="Diseño 4" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/5.jpg" alt="Diseño 5" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/6.jpg" alt="Diseño 6" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/7.jpg" alt="Diseño 7" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/8.jpg" alt="Diseño 8" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/9.jpg" alt="Diseño 9" loading="lazy" />
+              </div>
+            </div>
+            <div class="col" data-aos="zoom-in">
+              <div class="gal-item ratio ratio-1x1">
+                <img src="img/mejorado/10.jpg" alt="Diseño 10" loading="lazy" />
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
-    <footer class="seccion">
-      <div class="container">
-        <div class="contactos12">
-          <div class="columna columna-25">
-            <img src="img/logonails.png" class="logo-footer" alt="logo footer">
-          </div>
-          <div class="columna columna-25"></div>
-          <div class="columna columna-25">
-            <h3>Datos de contacto</h3>
-            <ul>
-              <li>vilcali6@gmail.com</li>
-              <li>962286009</li>
-              <li>Jr.Tumbes 103
-                <li>Referencia: Losa deportiva arenales</li>
-                <li> Ayacucho-Perú</li>
-            </ul>
-          </div>
-          <div class="columna columna-25">
-  <h3>Redes Sociales</h3>
-  <ul class="redes">
-    <li>
-      <a href="https://www.tiktok.com/@aly_vilca" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-tiktok"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://wa.me/51962286009?text=Hola!%F0%9F%98%8A%F0%9F%98%8A%0AQuisiera%20agendar%20mi%20cita%F0%9F%8C%85%F0%9F%8C%85%F0%9F%8E%A8%F0%9F%8E%A8.
-" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-    </li>
-    <li>
-      <a href="https://www.instagram.com/aly_vilca/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </li>
-  </ul>
-</div>
+      <!-- ========== CONTACTO (reemplaza todo tu <section id="contacto"> por este bloque) ========== -->
+<section id="contacto" class="section-pad">
+  <div class="container">
+    <h2 class="section-title mb-4 text-center">Contacto y cómo llegar</h2>
 
-          <img src="img/whatsapp_qr_code__1_-removebg-preview.png" alt="Código QR" class="codigo-qr">
-      
+    <div class="row g-4 align-items-stretch">
+      <!-- MAPA -->
+      <div class="col-12 col-lg-6">
+        <div class="ratio ratio-4x3 rounded-4 shadow-sm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.2452227408149!2d-74.23711790000003!3d-13.163604799999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91127d3ae537b589%3A0xa4c31e6604bc491c!2sLosa%20deportiva%20de%20Arenales!5e0!3m2!1ses-419!2spe!4v1727486313200!5m2!1ses-419!2spe"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Acciones rápidas debajo del mapa (opcional) -->
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <a class="btn btn-rose" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/dir/?api=1&destination=-13.1636048,-74.2371179">Cómo llegar</a>
+          <a class="btn btn-outline-dark" href="tel:+51962286009">Llamar</a>
+          <a class="btn btn-outline-dark" target="_blank" rel="noopener"
+             href="https://wa.me/51962286009?text=Hola%2C%20quiero%20agendar%20mi%20cita%20%F0%9F%92%85">WhatsApp</a>
         </div>
       </div>
-      
-      <div class="barra-footer">
-      <h5>&copy;Derechos Reservados - 2024 </h5></div>
-    </footer>
-    <script src="./codigo.js"></script>
-    <!-- AOS JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
-<script>
-  AOS.init(); // Inicializa AOS
-</script>
-<!-- Popup de promoción -->
-<div id="promo-popup" class="popup">
-  <div class="popup-content">
-      <span class="close-btn" id="cerrar">&times;</span>
-      <img src="img/halowen.jpg" alt="Promoción" class="promo-image" >
-      <p>¡Aprovecha nuestra promoción especial!</p>
-      <a href="https://wa.me/51962286009?text=¡Hola!%20Quiero%20saber%20más%20sobre%20la%20promoción💅🏻💅🏻
-" class="btn" target="_blank" rel="noopener noreferrer">Ver más</a>
+
+      <!-- RESUMEN + FORM -->
+      <div class="col-12 col-lg-6">
+        <!-- Resumen del pedido (se llena desde script.js) -->
+        <div class="card p-3 mb-3">
+          <h4 class="h6 mb-2">Resumen de tu pedido</h4>
+          <div class="table-responsive">
+            <table class="table table-sm align-middle m-0">
+              <thead>
+                <tr>
+                  <th>Producto/Servicio</th>
+                  <th class="text-center">Cant.</th>
+                  <th class="text-end">Precio</th>
+                </tr>
+              </thead>
+              <tbody id="order-summary">
+                <!-- filas renderizadas por JS -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th></th>
+                  <th class="text-end" id="order-total">S/ 0.00</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <small class="text-muted">* Edita el carrito desde el ícono 🛍️ del navbar.</small>
+        </div>
+
+        <!-- Formulario de contacto -->
+       <!-- Reservación express (opcional pero útil) -->
+<div class="row g-2 mb-3">
+  <div class="col-12 col-md-5">
+    <label class="form-label">Servicio preferido</label>
+    <select id="rx-servicio" class="form-select">
+      <option value="">— Elegir —</option>
+      <option>Semipermanente (S/45)</option>
+      <option>Nivelación con Rubber (S/60)</option>
+      <option>Acrílicas/Polygel (desde S/90)</option>
+    </select>
+  </div>
+  <div class="col-6 col-md-3">
+    <label class="form-label">Día</label>
+    <input id="rx-dia" type="date" class="form-control">
+  </div>
+  <div class="col-6 col-md-4">
+    <label class="form-label">Hora</label>
+    <input id="rx-hora" type="time" class="form-control">
   </div>
 </div>
-<a href="#top" class="btn-scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<!-- Acciones sticky al fondo del card -->
+<div class="sticky-actions">
+  <button type="button" class="btn btn-rose w-100" onclick="enviarWhatsApp()">
+    Enviar por WhatsApp
+  </button>
+  <a class="btn btn-outline-dark w-100 mt-2" target="_blank" rel="noopener"
+     href="https://www.google.com/maps/dir/?api=1&destination=-13.1636048,-74.2371179">
+    Ver ruta en Google Maps
+  </a>
+</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="section-footer">
+      <div class="container py-5">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <img
+              src="img/logonails.png"
+              class="logo-footer"
+              alt="Logo AJ Nails"
+            />
+          </div>
+          <div class="col-12 col-md-4">
+            <ul class="list-unstyled small m-0">
+              <li><strong>Correo:</strong> vilcali6@gmail.com</li>
+              <li><strong>Celular:</strong> 962286009</li>
+              <li>
+                <strong>Dirección:</strong> Jr. Tumbes 103 – Ayacucho (Ref: Losa
+                deportiva Arenales)
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end gap-3"
+          >
+            <ul class="redes list-unstyled d-flex m-0">
+              <li>
+                <a
+                  href="https://www.tiktok.com/@aly_vilca"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="TikTok"
+                  ><i class="fa-brands fa-tiktok"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/51962286009?text=Hola%2C%20quiero%20agendar%20mi%20cita%20%F0%9F%92%85"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="WhatsApp"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/aly_vilca/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+            <img
+              src="img/whatsapp_qr_code__1_-removebg-preview.png"
+              class="codigo-qr d-none d-md-block"
+              alt="QR WhatsApp"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="barra-footer text-center py-3">
+        <small>&copy; Derechos Reservados - 2024</small>
+      </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <a href="#inicio" class="btn-scroll-to-top" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Modal Promoción -->
+    <div class="modal fade" id="promoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3">
+          <div class="d-flex justify-content-end">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <img src="img/halowen.jpg" alt="Promoción" class="promo-image mb-3" />
+          <p class="text-center mb-3 fw-semibold">
+            ¡Aprovecha nuestra promoción especial!
+          </p>
+          <div class="text-center">
+            <a
+              class="btn btn-rose"
+              target="_blank"
+              rel="noopener"
+              href="https://wa.me/51962286009?text=%C2%A1Hola!%20Quiero%20saber%20m%C3%A1s%20sobre%20la%20promoci%C3%B3n%F0%9F%92%85%F0%9F%92%85"
+              >Ver más</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Offcanvas del carrito (debe existir con el mismo id) -->
+    <div class="offcanvas offcanvas-end cart-drawer" tabindex="-1" id="offcanvasCart">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Tu carrito</h5>
+        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column">
+        <ul id="cartList" class="list-group list-group-flush mb-3 small"></ul>
+        <div class="mt-auto pt-3 border-top">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="fw-semibold">Subtotal</span>
+            <span class="fw-bold" id="cartTotal">S/ 0.00</span>
+          </div>
+          <div class="d-grid gap-2">
+            <a href="checkout.html" class="btn btn-rose">Ir a pagar</a>
+            <button class="btn btn-outline-dark" id="clearCart">Vaciar carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts de terceros -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="codigo.js"></script> <!-- si tienes JS propio del index -->
   </body>
 </html>

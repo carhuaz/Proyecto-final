@@ -1,0 +1,37 @@
+/* Contenedor con espacio bajo el navbar fijo */
+.checkout-container{ padding-top: 92px; padding-bottom: 40px; }
+
+/* Pasos */
+.checkout-steps{
+  display:flex; gap:12px; padding:0; margin:0 0 18px 0; list-style:none; justify-content:center;
+}
+.checkout-steps li{
+  display:flex; align-items:center; gap:8px; padding:.35rem .75rem; border-radius:999px;
+  background:#fff; box-shadow:0 6px 18px rgba(0,0,0,.06);
+  font-weight:600; color:#777; user-select:none;
+}
+.checkout-steps li span{
+  width:26px; height:26px; display:grid; place-items:center; border-radius:50%;
+  background:rgba(219,106,185,.15); color:#c94fa6; font-weight:700;
+}
+.checkout-steps li.active{ color:#222; }
+.checkout-steps li.active span{ background:rgba(219,106,185,.35); color:#a21b85; }
+.checkout-steps li.done{ opacity:.7; }
+
+/* Resumen sticky */
+.sticky-summary{ position: sticky; top: 108px; border-radius:14px; }
+
+/* Animaciones */
+.fade-in{ opacity:0; transform: translateY(8px); animation: fadeIn .5s ease forwards; }
+.fade-in.delay-1{ animation-delay: .15s; }
+@keyframes fadeIn{ to{ opacity:1; transform:none; } }
+
+/* Inputs redondeados */
+.card .form-control, .card .form-select{ border-radius: 12px; }
+
+/* Botón */
+.btn-rose.btn-lg{ border-radius: 14px; padding: .9rem 1.2rem; }
+
+/* Tabla compacta */
+.table-sm>:not(caption)>*>*{ padding:.45rem .5rem; }
+.table thead th{ font-weight:700; }
